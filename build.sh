@@ -8,7 +8,7 @@ set -e
 echo "🚀 Building RunPod-Optimized Docker Image"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Using RunPod base image with:"
-echo "• PyTorch 2.8.0 with CUDA 12.9"
+echo "• PyTorch 2.9.0 with CUDA 12.9"
 echo "• Pre-compiled attention mechanisms:"
 echo "  - Flash Attention 2.8.3 (pre-built)"
 echo "  - Flash Attention 3 (for H100/H200)"

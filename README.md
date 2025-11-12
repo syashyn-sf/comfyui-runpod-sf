@@ -12,7 +12,7 @@
   - RTX 5090/B200: Sage Attention 2.2.0 (Blackwell optimized)
   - A100/A40: Flash Attention 2.8.3
   - Others: xformers 0.33
-- **📦 Latest Stack** - PyTorch 2.8.0 with CUDA 12.9 support
+- **📦 Latest Stack** - PyTorch 2.9.0 with CUDA 12.9 support
 - **🎛️ Web Control Panel** - Full management interface (port 7777)
 - **💾 Persistent Storage** - All data saved in `/workspace` volume
 - **☁️ Google Drive Sync** - Automatic output synchronization

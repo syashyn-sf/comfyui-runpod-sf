@@ -196,13 +196,14 @@ if [ "$NEED_INSTALL" = "1" ]; then
     # CivitAI integration packages
     uv pip install civitai-downloader aiofiles
 
-    # ComfyUI requirements - PyTorch 2.8.0 with CUDA 12.9
-    # Note: Using cu129 because PyTorch 2.8.0 is only available for cu129
+    # ComfyUI requirements - PyTorch 2.9.0 with CUDA 12.9
+    # Note: Using cu129 because PyTorch 2.9.0 is only available for cu129
     # The cu129 wheel includes CUDA 12.9 libraries, no toolkit installation needed
     # CRITICAL: torchvision 0.24.0 required for RTX 5090 (Bug #30)
     # torchvision 0.23.0 has PTX toolchain errors in torchvision.ops.nms on RTX 5090
-    echo "📦 Installing PyTorch 2.8.0 with CUDA 12.9..."
-    pip install torch==2.8.0 torchvision==0.24.0+cu129 torchaudio --index-url https://download.pytorch.org/whl/cu129
+    # Updated from 2.8.0 to 2.9.0 - torchvision 0.24.0 now requires torch 2.9.0
+    echo "📦 Installing PyTorch 2.9.0 with CUDA 12.9..."
+    pip install torch==2.9.0 torchvision==0.24.0+cu129 torchaudio --index-url https://download.pytorch.org/whl/cu129
 
     # Core ComfyUI dependencies
     uv pip install einops torchsde "kornia>=0.7.1" spandrel "safetensors>=0.4.2"
@@ -1223,7 +1224,7 @@ if [ ! -f "/workspace/ComfyUI/main.py" ]; then
         grep -v "^torch" requirements.txt > /tmp/comfy_req.txt || cp requirements.txt /tmp/comfy_req.txt
         pip install -r /tmp/comfy_req.txt
         # Ensure we have the right PyTorch for CUDA 12.9 with torchvision 0.24.0 (Bug #30)
-        pip install torch==2.8.0 torchvision==0.24.0+cu129 torchaudio --index-url https://download.pytorch.org/whl/cu129 --upgrade
+        pip install torch==2.9.0 torchvision==0.24.0+cu129 torchaudio --index-url https://download.pytorch.org/whl/cu129 --upgrade
     fi
 fi
 
