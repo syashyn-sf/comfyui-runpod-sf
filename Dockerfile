@@ -190,8 +190,6 @@ if [ "$NEED_INSTALL" = "1" ]; then
     # Core packages for UI
     uv pip install flask==3.0.0 psutil requests
 
-    # Google Sheets API for usage tracking
-    uv pip install gspread oauth2client
 
     # CivitAI integration packages
     uv pip install civitai-downloader aiofiles
