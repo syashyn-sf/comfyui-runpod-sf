@@ -22,7 +22,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: syashyn-sf/comfyui-runpod-sf
+  IMAGE_NAME: serhiiyashyn/comfyui-runpod-sf
 
 jobs:
   detect-changes:

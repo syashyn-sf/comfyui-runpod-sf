@@ -24,19 +24,19 @@
 
 Use the pre-built image directly:
 ```
-syashyn-sf/comfyui-runpod-sf:latest
+serhiiyashyn/comfyui-runpod-sf:latest
 ```
 
 Or build your own:
 ```bash
 ./build.sh
-docker tag comfyui-runpod:latest syashyn-sf/comfyui-runpod-sf:latest
-docker push syashyn-sf/comfyui-runpod-sf:latest
+docker tag comfyui-runpod:latest serhiiyashyn/comfyui-runpod-sf:latest
+docker push serhiiyashyn/comfyui-runpod-sf:latest
 ```
 
 ### 2. RunPod Template Settings
 
-- **Container Image:** `syashyn-sf/comfyui-runpod-sf:latest`
+- **Container Image:** `serhiiyashyn/comfyui-runpod-sf:latest`
 - **Container Disk:** 20-50 GB
 - **Volume Mount:** `/workspace`
 - **Volume Size:** 50-100 GB (for models)
@@ -171,5 +171,5 @@ MIT License - See LICENSE file for details.
 ---
 
 **Source:** https://github.com/syashyn-sf/comfyui-runpod-sf
-**Docker Hub:** https://hub.docker.com/r/syashyn-sf/comfyui-runpod-sf
+**Docker Hub:** https://hub.docker.com/r/serhiiyashyn/comfyui-runpod-sf
 **Support:** [Open an issue](https://github.com/syashyn-sf/comfyui-runpod-sf/issues)
