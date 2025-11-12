@@ -41,7 +41,7 @@ rclone config
 1. **On UI Startup**: Checks if rclone is configured
 2. **If Configured**: Automatically starts sync every 5 minutes
 3. **Smart Sync**: Only syncs files that changed since last sync
-4. **Logging**: All activity logged to `/workspace/gdrive_sync.log`
+4. **Logging**: All activity logged to `/tmp/rclone_sync.log`
 
 ### Verify Configuration
 
@@ -54,7 +54,7 @@ ls -la /root/.config/rclone/rclone.conf
 rclone lsd gdrive:
 
 # Check auto-sync logs
-tail -f /workspace/gdrive_sync.log
+tail -f /tmp/rclone_sync.log
 ```
 
 ### Backup Your Config (Optional)
@@ -81,7 +81,7 @@ cp /root/.config/rclone/rclone.conf /workspace/.config/rclone/
 
 **Want to Change Sync Interval?**
 - Default is 5 minutes
-- Edit `/app/ui/app.py` line 1015: `interval_minutes=5`
+- Edit sync interval in `/app/ui/app.py`
 - Restart UI to apply changes
 
 ### Summary
@@ -90,4 +90,4 @@ cp /root/.config/rclone/rclone.conf /workspace/.config/rclone/
 - Auto-sync runs every 5 minutes
 - Config survives container restarts
 - Only needs reconfiguration if you recreate the entire pod
-- Logs available at `/workspace/gdrive_sync.log`
+- Logs available at `/tmp/rclone_sync.log`

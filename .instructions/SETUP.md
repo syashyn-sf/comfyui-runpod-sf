@@ -7,7 +7,6 @@
 ```
 HF_TOKEN = hf_xxxxxxxxxxxxxxxxxxxx
 CIVITAI_API_KEY = xxxxxxxxxxxxxxxxxxxx
-GOOGLE_DRIVE_SA_JSON = {"type":"service_account",...}  (optional)
 COMFYUI_ADMIN_KEY = your-admin-token  (optional)
 ```
 

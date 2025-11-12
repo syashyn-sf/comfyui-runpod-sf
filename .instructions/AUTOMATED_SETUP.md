@@ -3,7 +3,7 @@
 ## 🚀 Fully Automated Setup Options
 
 ### Option 1: Service Account (Recommended - 100% Automatic)
-1. Follow [GOOGLE_DRIVE_SETUP.txt](./GOOGLE_DRIVE_SETUP.txt) to create service account
+1. Follow [GOOGLE_DRIVE.md](./GOOGLE_DRIVE.md) to create service account
 2. Add `GOOGLE_SERVICE_ACCOUNT` secret in RunPod with the JSON
 3. Deploy pod - **everything automatic!**
 

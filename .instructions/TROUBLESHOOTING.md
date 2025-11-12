@@ -49,7 +49,7 @@
 - **Verify Folder Sharing**: Folder must be shared with service account email
 - **Check Logs**:
   ```bash
-  cat /tmp/gdrive_sync.log
+  tail -f /tmp/rclone_sync.log
   ```
 
 #### Files Not Syncing
@@ -58,22 +58,17 @@
   ```bash
   ls -la /workspace/output/
   ```
-- Verify sync is running:
+- Check sync logs:
   ```bash
-  ps aux | grep sync_to_gdrive
-  ```
-- Manual sync test:
-  ```bash
-  cd /app/scripts
-  ./sync_to_gdrive.sh
+  tail -f /tmp/rclone_sync.log
   ```
 
 #### RunPod Secret Not Working
-- **Secret Name**: Must be exactly `GDRIVE_SERVICE_ACCOUNT`
+- **Secret Name**: Must be exactly `GOOGLE_SERVICE_ACCOUNT`
 - **Secret Value**: Entire JSON content (not file path)
 - **Check Environment**:
   ```bash
-  echo $RUNPOD_SECRET_GDRIVE_SERVICE_ACCOUNT | head -c 50
+  echo $GOOGLE_SERVICE_ACCOUNT | head -c 50
   ```
 
 ### Model Manager Issues
@@ -167,8 +162,9 @@
 
 ### Logs Location
 - Control Panel logs: Browser console (F12)
-- ComfyUI logs: `/tmp/comfyui.log`
-- Sync logs: `/tmp/gdrive_sync.log`
+- ComfyUI logs: `/workspace/comfyui.log`
+- UI logs: `/workspace/ui.log`
+- Sync logs: `/tmp/rclone_sync.log`
 - System logs: `journalctl -xe`
 
 ### Debug Commands
@@ -192,6 +188,6 @@ pip list | grep torch
 ```
 
 ### Support Resources
-- GitHub Issues: [Report bugs here](https://github.com/syashyn-sf/comfyui-runpod-sf/issues)
+- GitHub Issues: Report bugs in your repository
 - RunPod Discord: [Community support](https://discord.gg/runpod)
 - ComfyUI Discord: [ComfyUI help](https://discord.gg/comfyui)

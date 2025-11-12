@@ -66,23 +66,11 @@ This guide will help you set up automatic Google Drive sync for ComfyUI outputs.
 
 ## Step 6: Configure RunPod
 
-### Option 1: RunPod Secrets (Recommended)
-
 1. Go to [RunPod Secrets](https://www.runpod.io/console/secrets)
-2. Add two secrets:
-   - **GDRIVE_SERVICE_ACCOUNT**: Paste entire JSON content
-   - **GDRIVE_FOLDER_ID**: Your folder ID from Step 5
+2. Add your service account secret:
+   - **Name**: `GOOGLE_SERVICE_ACCOUNT`
+   - **Value**: Paste entire JSON content from Step 4
 3. Deploy pod - auto-sync starts automatically!
-
-### Option 2: Manual Configuration
-
-1. Access JupyterLab terminal
-2. Run setup script:
-   ```bash
-   cd /app/scripts
-   ./setup_gdrive.sh
-   ```
-3. Follow prompts to configure
 
 ## Verification
 
