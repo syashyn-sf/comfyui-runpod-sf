@@ -202,7 +202,7 @@ class RunPodAPI:
 
         Args:
             email_to_user_map: Map of email addresses to usernames
-                               e.g., {"serhii.y@webgroup-limited.com": "serhii"}
+                               e.g., {"user@stillfront.com": "username"}
 
         Returns:
             Dictionary with user statistics:

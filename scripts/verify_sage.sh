@@ -109,7 +109,7 @@ else
     echo "  ⚠️  May need manual intervention (control panel needs update)"
     echo ""
     echo "To fix permanently, run:"
-    echo "  curl -o /app/ui/app.py https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/app.py"
+    echo "  curl -o /app/ui/app.py https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/app.py"
     echo "  pkill -f 'python.*app.py' && cd /app/ui && python -u app.py > /workspace/ui.log 2>&1 &"
 fi
 echo ""

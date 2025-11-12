@@ -295,8 +295,8 @@ Modify `scripts/ensure_sync.sh` (same check at the beginning)
 **3. Rebuild and Push Docker Image**
 
 ```bash
-docker build -t wolfgrimmm/comfyui-runpod:latest .
-docker push wolfgrimmm/comfyui-runpod:latest
+docker build -t serhiiyashyn/comfyui-runpod-sf:latest .
+docker push serhiiyashyn/comfyui-runpod-sf:latest
 ```
 
 **4. Update All User Pods**
@@ -922,8 +922,8 @@ Next steps to deploy the solution:
 ```bash
 # This will build the main ComfyUI image with ENABLE_SYNC=false
 cd /path/to/comfyui-runpod-installer
-docker build --platform linux/amd64 -t wolfgrimmm/comfyui-runpod:latest .
-docker push wolfgrimmm/comfyui-runpod:latest
+docker build --platform linux/amd64 -t serhiiyashyn/comfyui-runpod-sf:latest .
+docker push serhiiyashyn/comfyui-runpod-sf:latest
 ```
 
 #### Build Sync Pod Image
@@ -950,7 +950,7 @@ Once Docker images are built and pushed:
 
 #### Step 2: Update User Pods
 1. Stop all existing user pods
-2. Create new pods using updated image: `wolfgrimmm/comfyui-runpod:latest`
+2. Create new pods using updated image: `serhiiyashyn/comfyui-runpod-sf:latest`
 3. Mount **same network volume** to `/workspace`
 4. Start pods - they will automatically skip sync (ENABLE_SYNC=false)
 
@@ -1003,7 +1003,7 @@ See **Troubleshooting** section above for common issues and solutions.
 
 ## Quick Reference
 
-**User Pod Image:** `wolfgrimmm/comfyui-runpod:latest` (sync disabled)
+**User Pod Image:** `serhiiyashyn/comfyui-runpod-sf:latest` (sync disabled)
 **Sync Pod Image:** `wolfgrimmm/comfyui-sync:latest` (sync enabled)
 **Network Volume:** Mount to `/workspace` on ALL pods
 **Environment Variable:** `GOOGLE_SERVICE_ACCOUNT` (sync pod only)

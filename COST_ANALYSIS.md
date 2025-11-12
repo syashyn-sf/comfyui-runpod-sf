@@ -181,6 +181,6 @@ All that's needed:
 
 This isn't about cutting corners—it's about being smart.
 
-GitHub: [github.com/wolfgrimmm/comfyui-runpod-installer](https://github.com/wolfgrimmm/comfyui-runpod-installer)
+GitHub: [github.com/syashyn-sf/comfyui-runpod-sf](https://github.com/syashyn-sf/comfyui-runpod-sf)
 
 *P.S. - This solution is open-source. Other companies are already using it to save thousands. Why keep overpaying?*

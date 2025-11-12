@@ -901,7 +901,7 @@ echo "   - Remove GitHub/Docs button"
 echo ""
 
 curl -o /app/ui/templates/control_panel.html \
-    https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/templates/control_panel.html \
+    https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/templates/control_panel.html \
     && echo "✅ Downloaded latest control_panel.html" \
     && pkill -f "python.*app.py" \
     && echo "✅ Stopped old Flask app" \
@@ -915,7 +915,7 @@ curl -o /app/ui/templates/control_panel.html \
 **Usage on RunPod:**
 ```bash
 # SSH into pod, then:
-curl -o fix_pod.sh https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/fix_pod.sh
+curl -o fix_pod.sh https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/fix_pod.sh
 chmod +x fix_pod.sh
 ./fix_pod.sh
 ```
@@ -1493,7 +1493,7 @@ curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/s
 
 ### Proper Fix (Not Yet Applied)
 ```bash
-curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/templates/control_panel.html && pkill -f "python.*app.py" && cd /app/ui && python -u app.py > /workspace/ui.log 2>&1 &
+curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/templates/control_panel.html && pkill -f "python.*app.py" && cd /app/ui && python -u app.py > /workspace/ui.log 2>&1 &
 ```
 
 ### What Should Have Been Done Differently
@@ -1832,7 +1832,7 @@ Given history of failed deployments, created manual fix script:
 **File Created:** `fix_bug22.sh`
 ```bash
 #!/bin/bash
-curl -o /app/ui/app.py https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/app.py
+curl -o /app/ui/app.py https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/app.py
 pkill -f "python.*app.py"
 cd /app/ui && python -u app.py > /workspace/ui.log 2>&1 &
 echo "✅ Fix complete! Launch button should now work without timing out."
@@ -1840,7 +1840,7 @@ echo "✅ Fix complete! Launch button should now work without timing out."
 
 **Usage on running pod:**
 ```bash
-curl -O https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/fix_bug22.sh
+curl -O https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/fix_bug22.sh
 chmod +x fix_bug22.sh
 ./fix_bug22.sh
 ```
@@ -3655,7 +3655,7 @@ tail -f /workspace/comfyui.log | grep "TensorRT GPU-Aware"
 **Manual fix for running pods:**
 ```bash
 # If you already have pods running, apply the patch manually:
-curl -o /tmp/patch.sh https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/scripts/patch_tensorrt_gpu_aware.sh
+curl -o /tmp/patch.sh https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/scripts/patch_tensorrt_gpu_aware.sh
 chmod +x /tmp/patch.sh
 /tmp/patch.sh
 ```
