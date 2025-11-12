@@ -7,7 +7,7 @@ echo "   - Remove GitHub/Docs button"
 echo "   - Fix JavaScript error (openDocs)"
 echo ""
 
-curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/templates/control_panel.html && \
+curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/templates/control_panel.html && \
 echo "✅ Downloaded latest control_panel.html" && \
 pkill -f "python.*app.py" && \
 echo "✅ Stopped old Flask app" && \

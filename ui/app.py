@@ -102,8 +102,8 @@ class ComfyUIManager:
             with open(USERS_FILE, 'r') as f:
                 self.users = json.load(f)
         else:
-            # Default users
-            self.users = ["serhii", "marcin", "vlad", "ksenija", "max", "ivan", "antonia"]
+            # Default users - empty list, users will be added via control panel
+            self.users = []
             self.save_users()
         
         # Check if user was previously selected
@@ -796,14 +796,9 @@ def auto_sync_to_sheets():
 
                 # Get usage data
                 runpod_api = RunPodAPI()
+                # TODO: Add your company's email-to-username mappings here
                 email_to_user = {
-                    'serhii.y@webgroup-limited.com': 'serhii',
-                    'marcin.k@webgroup-limited.com': 'marcin',
-                    'vladislav.k@webgroup-limited.com': 'vlad',
-                    'ksenija.s@webgroup-limited.com': 'ksenija',
-                    'max.k@webgroup-limited.com': 'max',
-                    'ivan.s@webgroup-limited.com': 'ivan',
-                    'antonia.v@webgroup-limited.com': 'antonia'
+                    # Example: 'user@stillfront.com': 'username'
                 }
 
                 usage_stats = runpod_api.calculate_user_usage(email_to_user)
@@ -1063,14 +1058,9 @@ def get_runpod_usage():
         runpod_api = RunPodAPI()
 
         # Map of RunPod emails to usernames
+        # TODO: Add your company's email-to-username mappings here
         email_to_user = {
-            'serhii.y@webgroup-limited.com': 'serhii',
-            'marcin.k@webgroup-limited.com': 'marcin',
-            'vladislav.k@webgroup-limited.com': 'vlad',
-            'ksenija.s@webgroup-limited.com': 'ksenija',
-            'max.k@webgroup-limited.com': 'max',
-            'ivan.s@webgroup-limited.com': 'ivan',
-            'antonia.v@webgroup-limited.com': 'antonia'
+            # Example: 'user@stillfront.com': 'username'
         }
 
         # Calculate usage per user
@@ -1122,14 +1112,9 @@ def sync_usage_to_sheets():
         runpod_api = RunPodAPI()
 
         # Map of RunPod emails to usernames
+        # TODO: Add your company's email-to-username mappings here
         email_to_user = {
-            'serhii.y@webgroup-limited.com': 'serhii',
-            'marcin.k@webgroup-limited.com': 'marcin',
-            'vladislav.k@webgroup-limited.com': 'vlad',
-            'ksenija.s@webgroup-limited.com': 'ksenija',
-            'max.k@webgroup-limited.com': 'max',
-            'ivan.s@webgroup-limited.com': 'ivan',
-            'antonia.v@webgroup-limited.com': 'antonia'
+            # Example: 'user@stillfront.com': 'username'
         }
 
         usage_stats = runpod_api.calculate_user_usage(email_to_user)
@@ -1229,14 +1214,9 @@ def create_monthly_report():
 
         # Get usage data from RunPod
         runpod_api = RunPodAPI()
+        # TODO: Add your company's email-to-username mappings here
         email_to_user = {
-            'serhii.y@webgroup-limited.com': 'serhii',
-            'marcin.k@webgroup-limited.com': 'marcin',
-            'vladislav.k@webgroup-limited.com': 'vlad',
-            'ksenija.s@webgroup-limited.com': 'ksenija',
-            'max.k@webgroup-limited.com': 'max',
-            'ivan.s@webgroup-limited.com': 'ivan',
-            'antonia.v@webgroup-limited.com': 'antonia'
+            # Example: 'user@stillfront.com': 'username'
         }
 
         # Get all audit logs

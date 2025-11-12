@@ -7,9 +7,9 @@ echo "   - Increase startup window from 5 to 20 minutes"
 echo ""
 
 # Download the fixed files
-curl -o /app/ui/app.py https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/app.py && \
+curl -o /app/ui/app.py https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/app.py && \
 echo "✅ Downloaded latest app.py with Bug #22 fix" && \
-curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/templates/control_panel.html && \
+curl -o /app/ui/templates/control_panel.html https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/templates/control_panel.html && \
 echo "✅ Downloaded latest control_panel.html with 20-minute startup window" && \
 pkill -f "python.*app.py" && \
 echo "✅ Stopped old Flask app" && \

@@ -27,7 +27,7 @@ echo "📂 Found installation at: $INSTALL_DIR"
 
 # Download the updated control_panel.html from GitHub
 echo "⬇️  Downloading updated file from GitHub..."
-curl -sSL https://raw.githubusercontent.com/wolfgrimmm/comfyui-runpod-installer/main/ui/templates/control_panel.html -o /tmp/control_panel_new.html
+curl -sSL https://raw.githubusercontent.com/syashyn-sf/comfyui-runpod-sf/main/ui/templates/control_panel.html -o /tmp/control_panel_new.html
 
 if [ $? -ne 0 ]; then
     echo "❌ Failed to download updated file from GitHub"

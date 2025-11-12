@@ -1,4 +1,4 @@
-# ComfyUI RunPod Installer
+# ComfyUI RunPod Installer - Stillfront
 
 🚀 Optimized Docker image for deploying ComfyUI on RunPod with advanced features and web control panel.
 
@@ -24,19 +24,19 @@
 
 Use the pre-built image directly:
 ```
-wolfgrimmm/comfyui-runpod:latest
+syashyn-sf/comfyui-runpod-sf:latest
 ```
 
 Or build your own:
 ```bash
 ./build.sh
-docker tag comfyui-runpod:latest yourusername/comfyui-runpod:latest
-docker push yourusername/comfyui-runpod:latest
+docker tag comfyui-runpod:latest syashyn-sf/comfyui-runpod-sf:latest
+docker push syashyn-sf/comfyui-runpod-sf:latest
 ```
 
 ### 2. RunPod Template Settings
 
-- **Container Image:** `wolfgrimmm/comfyui-runpod:latest`
+- **Container Image:** `syashyn-sf/comfyui-runpod-sf:latest`
 - **Container Disk:** 20-50 GB
 - **Volume Mount:** `/workspace`
 - **Volume Size:** 50-100 GB (for models)
@@ -170,6 +170,6 @@ MIT License - See LICENSE file for details.
 
 ---
 
-**Source:** https://github.com/wolfgrimmm/comfyui-runpod-installer
-**Docker Hub:** https://hub.docker.com/r/wolfgrimmm/comfyui-runpod
-**Support:** [Open an issue](https://github.com/wolfgrimmm/comfyui-runpod-installer/issues)
+**Source:** https://github.com/syashyn-sf/comfyui-runpod-sf
+**Docker Hub:** https://hub.docker.com/r/syashyn-sf/comfyui-runpod-sf
+**Support:** [Open an issue](https://github.com/syashyn-sf/comfyui-runpod-sf/issues)

@@ -883,7 +883,7 @@ try {
 ```javascript
 // REMOVED:
 function openDocs() {
-    window.open('https://github.com/wolfgrimmm/comfyui-runpod-installer', '_blank');
+    window.open('https://github.com/serhiiyashyn/comfyui-runpod-sf', '_blank');
 }
 ```
 
