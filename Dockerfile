@@ -232,7 +232,8 @@ if [ "$NEED_INSTALL" = "1" ]; then
     uv pip install ninja packaging wheel
 
     # Performance optimization libraries
-    uv pip install huggingface_hub hf_transfer hf_xet accelerate piexif requests deepspeed ultralytics==8.3.197
+    # ultralytics 8.3.205 - Updated from 8.3.197 (ComfyUI V61)
+    uv pip install huggingface_hub hf_transfer hf_xet accelerate piexif requests deepspeed ultralytics==8.3.205
 
     # ============================================================================
     # ATTENTION MECHANISMS - RTX 3000/4000/5000 SERIES SUPPORT

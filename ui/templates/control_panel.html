@@ -1704,7 +1704,7 @@
                     {% endif %}
                     {% for user in users %}
                         <option value="{{ user }}" {% if user == current_user %}selected{% endif %}>
-                            {{ user }}{% if user == 'serhii' %} (Admin){% endif %}
+                            {{ user }}
                         </option>
                     {% endfor %}
                 </select>
